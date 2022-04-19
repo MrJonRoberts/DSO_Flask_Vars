@@ -5,6 +5,33 @@
     <title>Title</title>
 </head>
 <body>
-Hello
+HOME
+<br/>
+{{ name }} <br/>
+{{ names }}
+<table border="1">
+    {% for name in names %}
+        <tr><td>Name</td><td>{{ name }}</td></tr>
+    {% endfor %}
+</table>
+
+<hr/>
+{{ people }}
+
+<table border="1">
+    <thead>
+    <tr><th>Name</th><th>Age</th><th>Balance</th></tr>
+    </thead>
+    <tbody>
+    {% for person in people %}
+    <tr>
+        <td>{{ person.name }}</td>
+        <td>{{ person.age }}</td>
+        <td>$ {{ person.bal  }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
 </body>
 </html>
